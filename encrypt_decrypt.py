@@ -13,8 +13,8 @@ def totalencryption(plaintext, rotor_position):
 
     ciphertextlist = []
     
-    plugboard_string = plugboard.Plugboard(plaintext)
-
+    #plugboard_string = plugboard.Plugboard(plaintext)
+    plugboard_string = plaintext.upper()
 
     stator1 = rotors_stators.Stator(statorperm1)
     stator2 = rotors_stators.Stator(statorperm2)
@@ -52,7 +52,8 @@ def totaldecryption(ciphertext, rotor_position):
     
     plaintextlist = []
     
-    plugboard_string = plugboard.Plugboard(ciphertext)
+    #plugboard_string = plugboard.Plugboard(ciphertext)
+    plugboard_string = ciphertext.upper()
     
     stator1 = rotors_stators.Stator(statorperm1)
     stator2 = rotors_stators.Stator(statorperm2)
@@ -84,10 +85,10 @@ def totaldecryption(ciphertext, rotor_position):
     return plaintext
 
 
-rotor = [0,0,0]
-
-string1 = totalencryption('ABCD', rotor)
-print(string1)
-
-string2 = totaldecryption(string1 , rotor)
-print(string2)
+#rotor = [0,1,1]
+#
+#string1 = totalencryption('ABCD', rotor)
+#print(string1)
+#
+#string2 = totaldecryption(string1 , rotor)
+#print(string2)

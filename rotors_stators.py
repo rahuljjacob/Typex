@@ -28,6 +28,7 @@ class Rotor:
         self.rotorperm = (rotorperm)                            #Random rotor permutation
         self.rotorposition = rotorposition                      #Initial starting position
         self.mapdictionary()
+        self.setrotorpos()
 
     #Creates both the encryption and decryption dictionaries
     def mapdictionary(self):
@@ -92,7 +93,8 @@ class Rotor:
  
     def setrotorpos(self):
         for _ in range(self.rotorposition):     # _ avoids using an iterator variable
-            self.forward_shift_dictionary_values(self.encdict)
+            self.encdict = self.forward_shift_dictionary_values(self.encdict)
+            self.decdict = self.reverse_shift_dictionary_values(self.decdict)
 
 mappings = { 
         'L':'X',
