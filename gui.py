@@ -21,23 +21,23 @@ class MainWindow(QMainWindow):
         self.encrotorlayout.addWidget(self.encrotor2pos)
         self.encrotorlayout.addWidget(self.encrotor3pos)
         
+        self.encbutton = QPushButton("Encrypt")
+        self.encbutton.setFixedSize(QSize(80, 40))
+        self.encbutton.setCheckable(True)
+        self.encbutton.clicked.connect(self.encrypt)
 
         self.ciphertextout = QLabel()
 
-        encbutton = QPushButton("Encrypt")
-        encbutton.setFixedSize(QSize(80, 40))
-        encbutton.setCheckable(True)
-        encbutton.clicked.connect(self.encrypt)
-
+        
         layout = QVBoxLayout()
         layout.addWidget(self.enc)
         layout.addWidget(self.plaintext)
         layout.addLayout(self.encrotorlayout)
-        layout.addWidget(encbutton)
+        layout.addWidget(self.encbutton)
         layout.addWidget(self.ciphertextout)
 
-        self.dec= QLabel()
 
+        self.dec = QLabel()
 
         self.dec.setText("Decryption")
 
@@ -54,16 +54,16 @@ class MainWindow(QMainWindow):
 
         self.plaintextout= QLabel()
 
-        decbutton = QPushButton("Decrypt")
-        decbutton.setFixedSize(QSize(80, 40))
-        decbutton.setCheckable(True)
-        decbutton.clicked.connect(self.decrypt)
+        self.decbutton = QPushButton("Decrypt")
+        self.decbutton.setFixedSize(QSize(80, 40))
+        self.decbutton.setCheckable(True)
+        self.decbutton.clicked.connect(self.decrypt)
 
         layout2 = QVBoxLayout()
         layout2.addWidget(self.dec)
         layout.addWidget(self.ciphertext)
         layout2.addLayout(self.decrotorlayout)
-        layout2.addWidget(decbutton)
+        layout2.addWidget(self.decbutton)
         layout2.addWidget(self.plaintextout)
 
         finallayout = QVBoxLayout()
