@@ -47,8 +47,8 @@ def Plugboard(plaintext):
             while (plugboard_setting[b] == b):
                 a = input("Character : ").upper()
                 b = input("Goes To: ").upper()
-                plugboard_setting[a] = b
-            cycles = input("Would you like to Make More Changes(y/n) : ")
+                plugboard_setting[b] = a
+            cycles = input("Would you like to Make More Changes(Y/N) : ")
 
     for i in plainlist:
         plugtext.append(plugboard_setting[i])
