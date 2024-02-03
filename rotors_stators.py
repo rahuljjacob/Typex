@@ -127,29 +127,3 @@ mappings = {
 
 def reflector(i):
     return mappings[i]
-
-#Test to make sure the Stator is working
-
-#stator1 = Stator("QVNGWDUCBREIXKTLJMYPSHAOZF")
-#for i in "ABCD":
-#    print(stator1.encrypt(i), end = '')
-#
-#print()
-#
-#for i in "QVNG":
-#    print(stator1.decrypt(i), end = '')
-
-
-#Test to make sure Rotor is Working
-
-#rotor1 = Rotor("WVCSFLDOXAQNHPUGITZKYBEJMR", 1, 0)
-#for i in "ABCD":
-#    print(rotor1.encrypt(i), end = '')
-#    rotor1.checkrotorstatus_encryption()
-#
-#print()
-#
-#rotor2 = Rotor("WVCSFLDOXAQNHPUGITZKYBEJMR", 1, 0)
-#for i in "WCFD":
-#    print(rotor2.decrypt(i), end = '')
-#    rotor2.checkrotorstatus_decryption()
